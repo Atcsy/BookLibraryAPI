@@ -1,5 +1,11 @@
 const mongoose = require('mongoose');
 
+const BooksRentedSchema = new mongoose.Schema({
+  BookID : {type: String},
+  rentedDate: {type: String},
+  expireDate: {type: String}  
+});
+
 const UserSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -29,10 +35,7 @@ const UserSchema = new mongoose.Schema({
     minlength: 5,
     maxlength: 255,
   },
-  booksRented : [{
-    expireDate: Date,
-    bookID: Number,
-  }],
+  booksRented : [BooksRentedSchema],
   createdAt: {
     type: Date,
     default: Date.now
