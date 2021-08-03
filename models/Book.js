@@ -1,21 +1,38 @@
 const mongoose = require('mongoose');
 
 const BookSchema = new mongoose.Schema({
+  author: {
+    type: String,
+    required: true,
+    maxlength: 100
+  },
+  country: {
+    type: String,
+    maxlength: 100
+  },
+  imageLink: {
+    type: String,
+    maxlength: 555
+  },
+  language: {
+    type: String,
+    maxlength: 255
+  },
+  link: {
+    type: String
+  },
+  pages: {
+    type: Number,
+    min: 1,
+    max: 9999
+  },
   title: {
     type: String,
     required: true,
-    minlength: 5,
-    maxlength: 50
-  },
-  description: {
-    type: String,
-    minlength: 5,
     maxlength: 255
   },
-  bookReleasedAt: {
-    type: Number,
-    min: 1,
-    max: 2500
+  year: {
+    type: Number
   },
   inStock: {
     type: Number,

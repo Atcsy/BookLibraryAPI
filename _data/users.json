@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Sasha Smith",
+        "email": "sasha@gmail.com",
+        "password": "123456"
+    },
+    {
+        "name": "George Harris",
+        "email": "harris@gmail.com",
+        "password": "123456"
+    },
+    {
+        "name": "Maria Glow",
+        "email": "mglow@gmail.com",
+        "password": "123456"
+    },
+    {
+        "name": "Stephanie Hanson",
+        "email": "stephhanson@gmail.com",
+        "password": "123456"
+    },
+    {
+        "name": "Jerry Miller",
+        "email": "jerrymiller@gmail.com",
+        "password": "123456"
+    },
+    {
+        "name": "Mark Johnson",
+        "email": "markjn@gmail.com",
+        "password": "123456"
+    }
+]

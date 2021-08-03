@@ -28,7 +28,7 @@ const users = JSON.parse(
 const importData = async () => {
   try {
     await Book.create(books);
-    await Users.create(users);
+    await User.create(users);
     
     console.log('Data Imported...');
     process.exit();
