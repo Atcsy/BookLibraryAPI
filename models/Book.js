@@ -15,7 +15,7 @@ const BookSchema = new mongoose.Schema({
   bookReleasedAt: {
     type: Number,
     min: 1,
-    max: 6
+    max: 2500
   },
   inStock: {
     type: Number,
@@ -29,10 +29,3 @@ const BookSchema = new mongoose.Schema({
 
 
 module.exports = mongoose.model('Book', BookSchema);
-
-
-
-book.image_url
-book.released_at 
-genre.genre 
-status 
