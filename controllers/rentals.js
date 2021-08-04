@@ -47,27 +47,54 @@ exports.rentBook = async (req, res, next) => {
         bookId = req.body.bookId;
         console.log(bookId);
         const book = await Book.findById(bookId);
-
+        
         //check book is in stock
         if (book.inStock === 0) {
             return next(
                 new ErrorResponse(`Sorry, We dont have ${book.title} in stock` , 200)
-            );
-        }
-        // set the the bookId to a reference id from the book model and push to user model
-        const obj = book.id;
-        
-        const data = {
-            BookId: obj,
-            rentedDate: moment().toDate()
-        }
-        user.booksRented.push(data);
+                );
+            }
+            // set the the bookId to a reference id from the book model and push to user model
+            const iDobj = book.id;
+            
+            const data = {
+                BookId: iDobj,
+                rentedDate: moment().toDate()
+            }
+            user.booksRented.push(data);
+            
+            
+            await user.save()
+            await book.updateOne({$inc: {inStock: -1}});
+            
 
-        //Trasaction Implementation required!
+        //Trasaction Implementation for user and book save
+        // async function createTrasaction() {
+
+        //     const session = await mongoose.startSession(); 
+        //     try {
+        //         session.startTransaction();                    
+                
+        //         const user = await User.create({ 
+        //             name: 'Van Helsing' 
+        //         }, { session });
         
-        await user.save()
-        book.inStock--;
-        await book.save();
+        //         await ShippingAddress.create({
+        //             address: 'Any Address',
+        //             user_id: user.id
+        //         }, { session });
+        
+        //         await session.commitTransaction();
+                
+        //         console.log('success');
+        //     } catch (error) {
+        //         console.log('error');
+        //         await session.abortTransaction();
+        //     }
+        //     session.endSession();
+        // }
+
+        
 
         res.status(200).json({ succes:true});
 
