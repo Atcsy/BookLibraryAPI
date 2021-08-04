@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const moment = require('moment');
 const ErrorResponse = require('../utils/errorResponse');
 const Book = require('../models/Book');
@@ -45,60 +46,31 @@ exports.rentBook = async (req, res, next) => {
         
         //HANDLE BOOK ID//
         bookId = req.body.bookId;
-        console.log(bookId);
+
         const book = await Book.findById(bookId);
         
-        //check book is in stock
-        if (book.inStock === 0) {
+        // check book is in stock
+        if (book.inStock <= 0) {
             return next(
                 new ErrorResponse(`Sorry, We dont have ${book.title} in stock` , 200)
                 );
-            }
-            // set the the bookId to a reference id from the book model and push to user model
-            const iDobj = book.id;
-            
-            const data = {
-                BookId: iDobj,
-                rentedDate: moment().toDate()
-            }
-            user.booksRented.push(data);
-            
-            
-            await user.save()
-            await book.updateOne({$inc: {inStock: -1}});
-            
+        }
 
-        //Trasaction Implementation for user and book save
-        // async function createTrasaction() {
-
-        //     const session = await mongoose.startSession(); 
-        //     try {
-        //         session.startTransaction();                    
-                
-        //         const user = await User.create({ 
-        //             name: 'Van Helsing' 
-        //         }, { session });
+        // set the the bookId to a reference id from the book model and push to user model
+        const iDobj = book.id;
         
-        //         await ShippingAddress.create({
-        //             address: 'Any Address',
-        //             user_id: user.id
-        //         }, { session });
+        const data = {
+            BookId: iDobj,
+            rentedDate: moment().toDate()
+        }
+        user.booksRented.push(data);
+            
+        //save user to db
+        await user.save();
+        // decrement inStock by 1
+        await book.updateOne({ $inc: {inStock: -1}});
         
-        //         await session.commitTransaction();
-                
-        //         console.log('success');
-        //     } catch (error) {
-        //         console.log('error');
-        //         await session.abortTransaction();
-        //     }
-        //     session.endSession();
-        // }
-
-        
-
-        res.status(200).json({ succes:true});
-
-
+        res.status(200).json({ succes: true, message: `succefully rented ${book.title}`});
 
     } catch (error) {
         next(error);
