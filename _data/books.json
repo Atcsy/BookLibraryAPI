@@ -8,7 +8,7 @@
     "pages": 226,
     "title": "Pride and Prejudice",
     "year": 1813,
-    "inStock": "3"
+    "inStock": "1"
     },
     {
     "author": "Samuel Beckett",
@@ -19,7 +19,7 @@
     "pages": 256,
     "title": "Molloy, Malone Dies, The Unnamable, the trilogy",
     "year": 1952,
-    "inStock": "3"
+    "inStock": "4"
     },
     {
     "author": "Giovanni Boccaccio",
@@ -30,7 +30,7 @@
     "pages": 1024,
     "title": "The Decameron",
     "year": 1351,
-    "inStock": "3"
+    "inStock": "0"
     },
     {
     "author": "Jorge Luis Borges",
@@ -41,7 +41,7 @@
     "pages": 224,
     "title": "Ficciones",
     "year": 1965,
-    "inStock": "3"
+    "inStock": "5"
     },
     {
     "author": "Emily Bront\u00eb",
@@ -52,7 +52,7 @@
     "pages": 342,
     "title": "Wuthering Heights",
     "year": 1847,
-    "inStock": "3"
+    "inStock": "0"
     },
     {
     "author": "Albert Camus",
@@ -63,7 +63,7 @@
     "pages": 185,
     "title": "The Stranger",
     "year": 1942,
-    "inStock": "3"
+    "inStock": "2"
     },
     {
     "author": "Paul Celan",
@@ -74,7 +74,7 @@
     "pages": 320,
     "title": "Poems",
     "year": 1952,
-    "inStock": "3"
+    "inStock": "2"
     },
     {
     "author": "Louis-Ferdinand C\u00e9line",
@@ -85,7 +85,7 @@
     "pages": 505,
     "title": "Journey to the End of the Night",
     "year": 1932,
-    "inStock": "3"
+    "inStock": "2"
     },
     {
     "author": "Miguel de Cervantes",
@@ -96,7 +96,7 @@
     "pages": 1056,
     "title": "Don Quijote De La Mancha",
     "year": 1610,
-    "inStock": "3"
+    "inStock": "2"
     },
     {
     "author": "Geoffrey Chaucer",
@@ -107,7 +107,7 @@
     "pages": 544,
     "title": "The Canterbury Tales",
     "year": 1450,
-    "inStock": "3"
+    "inStock": "2"
     },
     {
     "author": "Anton Chekhov",
@@ -118,7 +118,7 @@
     "pages": 194,
     "title": "Stories",
     "year": 1886,
-    "inStock": "3"
+    "inStock": "2"
     },
     {
     "author": "Joseph Conrad",
@@ -272,7 +272,7 @@
     "pages": 528,
     "title": "Madame Bovary",
     "year": 1857,
-    "inStock": "3"
+    "inStock": "6"
     },
     {
     "author": "Gustave Flaubert",
@@ -283,7 +283,7 @@
     "pages": 606,
     "title": "Sentimental Education",
     "year": 1869,
-    "inStock": "3"
+    "inStock": "6"
     },
     {
     "author": "Federico Garc\u00eda Lorca",
@@ -294,7 +294,7 @@
     "pages": 218,
     "title": "Gypsy Ballads",
     "year": 1928,
-    "inStock": "3"
+    "inStock": "6"
     },
     {
     "author": "Gabriel Garc\u00eda M\u00e1rquez",
@@ -305,7 +305,7 @@
     "pages": 417,
     "title": "One Hundred Years of Solitude",
     "year": 1967,
-    "inStock": "3"
+    "inStock": "6"
     },
     {
     "author": "Gabriel Garc\u00eda M\u00e1rquez",
@@ -316,7 +316,7 @@
     "pages": 368,
     "title": "Love in the Time of Cholera",
     "year": 1985,
-    "inStock": "3"
+    "inStock": "6"
     },
     {
     "author": "Johann Wolfgang von Goethe",
@@ -349,7 +349,7 @@
     "pages": 600,
     "title": "The Tin Drum",
     "year": 1959,
-    "inStock": "3"
+    "inStock": "1"
     },
     {
     "author": "Jo\u00e3o Guimar\u00e3es Rosa",
@@ -360,7 +360,7 @@
     "pages": 494,
     "title": "The Devil to Pay in the Backlands",
     "year": 1956,
-    "inStock": "3"
+    "inStock": "1"
     },
     {
     "author": "Knut Hamsun",
@@ -371,7 +371,7 @@
     "pages": 176,
     "title": "Hunger",
     "year": 1890,
-    "inStock": "3"
+    "inStock": "1"
     },
     {
     "author": "Ernest Hemingway",
@@ -382,7 +382,7 @@
     "pages": 128,
     "title": "The Old Man and the Sea",
     "year": 1952,
-    "inStock": "3"
+    "inStock": "1"
     },
     {
     "author": "Homer",
@@ -393,7 +393,7 @@
     "pages": 608,
     "title": "Iliad",
     "year": -735,
-    "inStock": "3"
+    "inStock": "1"
     },
     {
     "author": "Homer",
@@ -404,7 +404,7 @@
     "pages": 374,
     "title": "Odyssey",
     "year": -800,
-    "inStock": "3"
+    "inStock": "1"
     },
     {
     "author": "Henrik Ibsen",
@@ -426,7 +426,7 @@
     "pages": 228,
     "title": "Ulysses",
     "year": 1922,
-    "inStock": "3"
+    "inStock": "0"
     },
     {
     "author": "Franz Kafka",
@@ -437,7 +437,7 @@
     "pages": 488,
     "title": "Stories",
     "year": 1924,
-    "inStock": "3"
+    "inStock": "0"
     },
     {
     "author": "Franz Kafka",
@@ -448,7 +448,7 @@
     "pages": 160,
     "title": "The Trial",
     "year": 1925,
-    "inStock": "3"
+    "inStock": "0"
     },
     {
     "author": "Franz Kafka",
@@ -459,7 +459,7 @@
     "pages": 352,
     "title": "The Castle",
     "year": 1926,
-    "inStock": "3"
+    "inStock": "0"
     },
     {
     "author": "K\u0101lid\u0101sa",
@@ -470,7 +470,7 @@
     "pages": 147,
     "title": "The recognition of Shakuntala",
     "year": 150,
-    "inStock": "3"
+    "inStock": "0"
     },
     {
     "author": "Yasunari Kawabata",
@@ -481,7 +481,7 @@
     "pages": 288,
     "title": "The Sound of the Mountain",
     "year": 1954,
-    "inStock": "3"
+    "inStock": "0"
     },
     {
     "author": "Nikos Kazantzakis",
@@ -492,7 +492,7 @@
     "pages": 368,
     "title": "Zorba the Greek",
     "year": 1946,
-    "inStock": "3"
+    "inStock": "0"
     },
     {
     "author": "D. H. Lawrence",
@@ -503,7 +503,7 @@
     "pages": 432,
     "title": "Sons and Lovers",
     "year": 1913,
-    "inStock": "3"
+    "inStock": "0"
     },
     {
     "author": "Halld\u00f3r Laxness",
@@ -756,7 +756,7 @@
     "pages": 438,
     "title": "The Masnavi",
     "year": 1236,
-    "inStock": "3"
+    "inStock": "0"
     },
     {
     "author": "Salman Rushdie",
@@ -767,7 +767,7 @@
     "pages": 536,
     "title": "Midnight's Children",
     "year": 1981,
-    "inStock": "3"
+    "inStock": "0"
     },
     {
     "author": "Saadi",
@@ -778,7 +778,7 @@
     "pages": 298,
     "title": "Bostan",
     "year": 1257,
-    "inStock": "3"
+    "inStock": "0"
     },
     {
     "author": "Tayeb Salih",
@@ -789,7 +789,7 @@
     "pages": 139,
     "title": "Season of Migration to the North",
     "year": 1966,
-    "inStock": "3"
+    "inStock": "0"
     },
     {
     "author": "Jos\u00e9 Saramago",
@@ -800,7 +800,7 @@
     "pages": 352,
     "title": "Blindness",
     "year": 1995,
-    "inStock": "3"
+    "inStock": "0"
     },
     {
     "author": "William Shakespeare",
@@ -811,7 +811,7 @@
     "pages": 432,
     "title": "Hamlet",
     "year": 1603,
-    "inStock": "3"
+    "inStock": "0"
     },
     {
     "author": "William Shakespeare",
@@ -822,7 +822,7 @@
     "pages": 384,
     "title": "King Lear",
     "year": 1608,
-    "inStock": "3"
+    "inStock": "0"
     },
     {
     "author": "William Shakespeare",
@@ -833,7 +833,7 @@
     "pages": 314,
     "title": "Othello",
     "year": 1609,
-    "inStock": "3"
+    "inStock": "0"
     },
     {
     "author": "Sophocles",
@@ -844,7 +844,7 @@
     "pages": 88,
     "title": "Oedipus the King",
     "year": -430,
-    "inStock": "3"
+    "inStock": "0"
     },
     {
     "author": "Stendhal",
@@ -855,7 +855,7 @@
     "pages": 576,
     "title": "The Red and the Black",
     "year": 1830,
-    "inStock": "3"
+    "inStock": "0"
     },
     {
     "author": "Laurence Sterne",
