@@ -2,7 +2,19 @@
     {
         "name": "Sasha Smith",
         "email": "sasha@gmail.com",
-        "password": "123456"
+        "password": "123456",
+        "booksRented": [
+            {
+                "BookId": "610aab69947f440869a19ecc",
+                "rentedDate": "2021-08-04T14:59:53.896+00:00",
+                "expiredDate": "2021-08-04T14:59:53.896+00:00"
+            },
+            {
+                "BookId": "610aab69947f440834a19ecc",
+                "rentedDate": "2020-08-04T14:59:53.896+00:00",
+                "expiredDate": "2020-08-04T14:59:53.896+00:00"
+            }
+        ]
     },
     {
         "name": "George Harris",

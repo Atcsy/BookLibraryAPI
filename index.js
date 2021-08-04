@@ -5,6 +5,7 @@ const connectDB = require('./config/db');
 //Routes
 const users = require('./routes/users');
 const books = require('./routes/books');
+const rentals = require('./routes/rentals');
 //Env variables
 dotenv.config({ path: './config/config.env'}); 
 // Conncet DB
@@ -17,6 +18,7 @@ app.use(express.json());
 //Mount routers
 app.use('/api/v1/users', users);
 app.use('/api/v1/books', books);
+app.use('/api/v1/rentals', rentals);
 
 app.use(errorHandler);
 

@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
 
 const BooksRentedSchema = new mongoose.Schema({
-  BookID : {type: String},
-  rentedDate: {type: String},
-  expireDate: {type: String}  
+  BookId : { type: mongoose.Schema.Types.ObjectId, ref: 'Book' },
+  rentedDate: { type: Date }  
 });
 
 const UserSchema = new mongoose.Schema({
@@ -35,7 +34,7 @@ const UserSchema = new mongoose.Schema({
     minlength: 5,
     maxlength: 255,
   },
-  booksRented : [BooksRentedSchema],
+  booksRented : [ BooksRentedSchema ],
   createdAt: {
     type: Date,
     default: Date.now
