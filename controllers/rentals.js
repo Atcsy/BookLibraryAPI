@@ -1,4 +1,3 @@
-const mongoose = require('mongoose');
 const moment = require('moment');
 const ErrorResponse = require('../utils/errorResponse');
 const Book = require('../models/Book');
@@ -50,11 +49,11 @@ exports.rentBook = async (req, res, next) => {
         const book = await Book.findById(bookId);
         
         // check book is in stock
-        if (book.inStock <= 0) {
-            return next(
-                new ErrorResponse(`Sorry, We dont have ${book.title} in stock` , 200)
-                );
-        }
+        // if (book.inStock <= 0) {
+        //     return next(
+        //         new ErrorResponse(`Sorry, We dont have ${book.title} in stock` , 200)
+        //         );
+        // }
 
         // set the the bookId to a reference id from the book model and push to user model
         const iDobj = book.id;
@@ -68,7 +67,7 @@ exports.rentBook = async (req, res, next) => {
         //save user to db
         await user.save();
         // decrement inStock by 1
-        await book.updateOne({ $inc: {inStock: -1}});
+        await book.updateOne({ $inc: {inStock: -1}}, { runValidators: true});
         
         res.status(200).json({ succes: true, message: `succefully rented ${book.title}`});
 

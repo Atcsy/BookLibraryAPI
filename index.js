@@ -22,6 +22,10 @@ app.use('/api/v1/rentals', rentals);
 
 app.use(errorHandler);
 
+app.all('*', (req, res, next) => {
+    res.status(404).json({succes: false, message: 'This route does not exists'});
+});
+
 
 
 const PORT = process.env.PORT || 5000;
