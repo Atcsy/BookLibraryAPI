@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const BooksRentedSchema = new mongoose.Schema({
-  BookId : { type: mongoose.Schema.Types.ObjectId, ref: 'Book' },
-  rentedDate: { type: Date }  
+  BookId: { type: mongoose.Schema.ObjectId, ref: 'Book' },
+  rentedDate: { type: Date },
 });
 
 const UserSchema = new mongoose.Schema({
@@ -10,7 +10,7 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
     minlength: 5,
-    maxlength: 50
+    maxlength: 50,
   },
   email: {
     type: String,
@@ -18,28 +18,27 @@ const UserSchema = new mongoose.Schema({
     unique: true,
     maxlength: 255,
     match: [
-      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-      'Please add a valid email'
-    ]
+      /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
+      'Please add a valid email',
+    ],
   },
   password: {
     type: String,
     required: true,
     minlength: 5,
     maxlength: 255,
-    select: false
+    select: false,
   },
   phone: {
     type: String,
     minlength: 5,
     maxlength: 255,
   },
-  booksRented : [ BooksRentedSchema ],
+  booksRented: [BooksRentedSchema],
   createdAt: {
     type: Date,
-    default: Date.now
-  }
+    default: Date.now,
+  },
 });
-
 
 module.exports = mongoose.model('User', UserSchema);

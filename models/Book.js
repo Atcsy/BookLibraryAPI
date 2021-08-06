@@ -4,35 +4,35 @@ const BookSchema = new mongoose.Schema({
   author: {
     type: String,
     required: true,
-    maxlength: 100
+    maxlength: 100,
   },
   country: {
     type: String,
-    maxlength: 100
+    maxlength: 100,
   },
   imageLink: {
     type: String,
-    maxlength: 555
+    maxlength: 555,
   },
   language: {
     type: String,
-    maxlength: 255
+    maxlength: 255,
   },
   link: {
-    type: String
+    type: String,
   },
   pages: {
     type: Number,
     min: 1,
-    max: 9999
+    max: 9999,
   },
   title: {
     type: String,
     required: true,
-    maxlength: 255
+    maxlength: 255,
   },
   year: {
-    type: Number
+    type: Number,
   },
   inStock: {
     type: Number,
@@ -40,9 +40,8 @@ const BookSchema = new mongoose.Schema({
   },
   createdAt: {
     type: Date,
-    default: Date.now
-  }
+    default: Date.now,
+  },
 });
-
 
 module.exports = mongoose.model('Book', BookSchema);
