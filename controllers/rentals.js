@@ -5,7 +5,7 @@ const Book = require('../models/Book');
 const User = require('../models/User');
 const Rental = require('../models/Rental');
 
-//POST api/v1/rentals/:id (book)
+//POST api/v1/rentals/rent/:id (user)
 exports.rentBook = asyncHandler(async (req, res, next) => {
   const user = await User.findById(req.params.id);
   const book = await Book.findById(req.body.bookId);
@@ -16,7 +16,7 @@ exports.rentBook = asyncHandler(async (req, res, next) => {
     return next(new ErrorResponse('Resource not found', 404));
   }
   if (rental.length >= 5) {
-    return next(new ErrorResponse('Please return a book to rent another', 401));
+    return next(new ErrorResponse('Please return a book to rent another', 400));
   }
 
   //Get the DueBooks from rental collection
@@ -25,12 +25,12 @@ exports.rentBook = asyncHandler(async (req, res, next) => {
       $eq: req.params.id,
     },
     returnDate: {
-      $gte: Date.now(),
+      $lt: Date.now(),
     },
   });
 
   if (dueBooks.length >= 1) {
-    return next(new ErrorResponse('Please return overdue book(s) ', 401));
+    return next(new ErrorResponse('Please return overdue book(s) ', 400));
   }
   // check book is in stock
   if (book.inStock <= 0) {
@@ -53,3 +53,44 @@ exports.rentBook = asyncHandler(async (req, res, next) => {
     .status(200)
     .json({ succes: true, message: `succefully rented ${book.title}` });
 });
+
+//POST api/v1/rentals/return/:id (user)
+exports.returnBook = asyncHandler(async (req, res, next) => {
+  const user = await User.findById(req.params.id);
+  const book = await Book.findById(req.body.bookId);
+  const rental = await Rental.find({
+    user: req.params.id,
+    book: req.body.bookId,
+  });
+
+  //If we dont have user, book or any rental respond error
+  if (!user || !book || rental.length === 0) {
+    return next(new ErrorResponse('Resource not found', 404));
+  }
+
+  await Rental.findOneAndDelete({
+    user: req.params.id,
+    book: req.body.bookId,
+  });
+
+  // increment inStock by 1
+  await book.updateOne({ $inc: { inStock: +1 } }, { runValidators: true });
+
+  res.status(200).json({ succes: true, message: {} });
+});
+
+//GET api/v1/rentals/overdue/
+// exports.getOverDueRentals = asyncHandler(async (req, res, next) => {
+//   //find overdue rentals
+//   const rental = await Rental.find({
+//     returnDate: {
+//       $lt: Date.now(),
+//     },
+//   });
+
+//   if (rental.length === 0) {
+//     return next(new ErrorResponse('No overdue rentals found', 400));
+//   }
+
+//   res.status(200).json({ succes: true, message: 'test' });
+// });
