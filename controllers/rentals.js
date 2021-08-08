@@ -80,17 +80,24 @@ exports.returnBook = asyncHandler(async (req, res, next) => {
 });
 
 //GET api/v1/rentals/overdue/
-// exports.getOverDueRentals = asyncHandler(async (req, res, next) => {
-//   //find overdue rentals
-//   const rental = await Rental.find({
-//     returnDate: {
-//       $lt: Date.now(),
-//     },
-//   });
+exports.getOverDueRentals = asyncHandler(async (req, res, next) => {
+  const overDuerentals = await Rental.find({
+    returnDate: {
+      $lt: Date.now(),
+    },
+  })
+    .populate({
+      path: 'book',
+      select: 'title, author',
+    })
+    .populate({
+      path: 'user',
+      select: 'name, email',
+    });
 
-//   if (rental.length === 0) {
-//     return next(new ErrorResponse('No overdue rentals found', 400));
-//   }
+  if (overDuerentals.length === 0) {
+    return next(new ErrorResponse('No overdue rentals found', 400));
+  }
 
-//   res.status(200).json({ succes: true, message: 'test' });
-// });
+  res.status(200).json({ succes: true, message: overDuerentals });
+});
