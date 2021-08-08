@@ -27,3 +27,10 @@ exports.auth = asyncHandler(async (req, res, next) => {
     return next(new ErrorResponse('No authorized access for this route', 401));
   }
 });
+
+exports.admin = asyncHandler(async (req, res, next) => {
+  if (req.user.role !== 'admin') {
+    return next(new ErrorResponse('Not authorized to access this route', 401));
+  }
+  next();
+});

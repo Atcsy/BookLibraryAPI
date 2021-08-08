@@ -4,13 +4,12 @@ const User = require('../models/User');
 
 // POST api/v1/register
 exports.registerUser = asyncHandler(async (req, res, next) => {
-  const { name, email, password, role, phone } = req.body;
+  const { name, email, password, phone } = req.body;
 
   const user = await User.create({
     name,
     email,
     password,
-    role,
     phone,
   });
 
@@ -47,4 +46,21 @@ exports.getMe = asyncHandler(async (req, res, next) => {
   const user = await User.findById(req.user.id);
 
   res.status(201).json({ success: true, data: user });
+});
+
+// POST api/v1/registeradmin
+//ONLY IN DEV! DELETE THIS IN PROD!
+exports.registerAdmin = asyncHandler(async (req, res, next) => {
+  const { name, email, password, phone } = req.body;
+
+  const user = await User.create({
+    name,
+    email,
+    password,
+    role: 'admin',
+    phone,
+  });
+
+  const token = user.getJwt();
+  res.status(201).json({ success: true, token });
 });

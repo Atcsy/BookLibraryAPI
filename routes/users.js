@@ -7,16 +7,16 @@ const {
   deleteUser,
 } = require('../controllers/users');
 
-const { auth } = require('../middleware/auth');
+const { auth, admin } = require('../middleware/auth');
 
 const router = express.Router();
 
-router.route('/').get(auth, getUsers).post(auth, createUser);
+router.route('/').get(auth, admin, getUsers).post(auth, createUser);
 
 router
   .route('/:id')
-  .get(auth, getUser)
-  .put(auth, updateUser)
-  .delete(auth, deleteUser);
+  .get(auth, admin, getUser)
+  .put(auth, admin, updateUser)
+  .delete(auth, admin, deleteUser);
 
 module.exports = router;
