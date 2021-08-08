@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const brcryptjs = require('bcryptjs');
 
 const UserSchema = new mongoose.Schema({
   name: {
@@ -38,6 +39,12 @@ const UserSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+});
+
+//use mongoose middleware to hash the password after saving user
+UserSchema.pre('save', async function (next) {
+  const salt = await brcryptjs.genSalt(9);
+  this.password = await brcryptjs.hash(this.password, salt);
 });
 
 module.exports = mongoose.model('User', UserSchema);

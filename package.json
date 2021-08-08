@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": ">=16.10.3 <17"
+    "node": ">=10.10.3 <17"
   },
   "scripts": {
     "start": "NODE_ENV=porduction node index",
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Atcsy/BookLibraryAPI#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "moment": "^2.29.1",
