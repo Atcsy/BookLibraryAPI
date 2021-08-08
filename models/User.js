@@ -1,10 +1,5 @@
 const mongoose = require('mongoose');
 
-const BooksRentedSchema = new mongoose.Schema({
-  BookId: { type: mongoose.Schema.ObjectId, ref: 'Book' },
-  rentedDate: { type: Date },
-});
-
 const UserSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -34,7 +29,6 @@ const UserSchema = new mongoose.Schema({
     minlength: 5,
     maxlength: 255,
   },
-  booksRented: [BooksRentedSchema],
   createdAt: {
     type: Date,
     default: Date.now,

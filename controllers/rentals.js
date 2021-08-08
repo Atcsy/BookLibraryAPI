@@ -1,75 +1,55 @@
 const moment = require('moment');
 const ErrorResponse = require('../utils/errorResponse');
+const asyncHandler = require('../middleware/asyncHandler');
 const Book = require('../models/Book');
 const User = require('../models/User');
+const Rental = require('../models/Rental');
 
-exports.rentBook = async (req, res, next) => {
-  try {
-    const user = await User.findById(req.params.id);
+//POST api/v1/rentals/:id (book)
+exports.rentBook = asyncHandler(async (req, res, next) => {
+  const user = await User.findById(req.params.id);
+  const book = await Book.findById(req.body.bookId);
+  const rental = await Rental.find({ user: req.params.id });
 
-    //HANDLE USER//
-    if (!user) {
-      return next(new ErrorResponse('Resource not found', 404));
-    }
-
-    //check the user for having 5 or more rented books
-    if (user.booksRented.length >= 5) {
-      return next(
-        new ErrorResponse('Please return a book to rent another', 401)
-      );
-    }
-
-    //check user for having any expired rental and allow users without any rentals
-    if (user.booksRented.length !== 0) {
-      const expiredBooks = [];
-      let daysDiff = 0;
-      user.booksRented.forEach((data) => {
-        daysDiff = moment().diff(data.rentedDate, 'days');
-        if (daysDiff > 14) {
-          expiredBooks.push(data.BookId);
-        }
-      });
-      // the user has books with expired date
-      if (expiredBooks.length !== 0) {
-        return next(
-          new ErrorResponse(
-            'Please return book(s) with expired date first',
-            401
-          )
-        );
-      }
-    }
-
-    //HANDLE BOOK ID//
-    const { bookId } = req.body;
-
-    const book = await Book.findById(bookId);
-
-    // check book is in stock
-    if (book.inStock <= 0) {
-      return next(
-        new ErrorResponse(`Sorry, We dont have ${book.title} in stock`, 200)
-      );
-    }
-
-    // set the the bookId to a reference id from the book model and push to user model
-    const iDobj = book.id;
-
-    const data = {
-      BookId: iDobj,
-      rentedDate: moment().toDate(),
-    };
-    user.booksRented.push(data);
-
-    //save user to db
-    await user.save();
-    // decrement inStock by 1
-    await book.updateOne({ $inc: { inStock: -1 } }, { runValidators: true });
-
-    res
-      .status(200)
-      .json({ succes: true, message: `succefully rented ${book.title}` });
-  } catch (error) {
-    next(error);
+  //If we dont have user or book respond error
+  if (!user || !book) {
+    return next(new ErrorResponse('Resource not found', 404));
   }
-};
+  if (rental.length >= 5) {
+    return next(new ErrorResponse('Please return a book to rent another', 401));
+  }
+
+  //Get the DueBooks from rental collection
+  const dueBooks = await Rental.find({
+    user: {
+      $eq: req.params.id,
+    },
+    returnDate: {
+      $gte: Date.now(),
+    },
+  });
+
+  if (dueBooks.length >= 1) {
+    return next(new ErrorResponse('Please return overdue book(s) ', 401));
+  }
+  // check book is in stock
+  if (book.inStock <= 0) {
+    return next(
+      new ErrorResponse(`Sorry, We dont have ${book.title} in stock`, 200)
+    );
+  }
+
+  await Rental.create({
+    book: book._id,
+    issueDate: Date.now(),
+    returnDate: moment().add(14, 'days').toDate(),
+    user: user._id,
+  });
+
+  // decrement inStock by 1
+  await book.updateOne({ $inc: { inStock: -1 } }, { runValidators: true });
+
+  res
+    .status(200)
+    .json({ succes: true, message: `succefully rented ${book.title}` });
+});

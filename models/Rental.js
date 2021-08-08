@@ -10,7 +10,7 @@ const RentalSchema = new mongoose.Schema({
     default: Date.now(),
   },
   returnDate: { type: Date },
-  id: {
+  user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
   },
