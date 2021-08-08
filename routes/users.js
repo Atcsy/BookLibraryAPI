@@ -11,11 +11,11 @@ const { auth } = require('../middleware/auth');
 
 const router = express.Router();
 
-router.route('/').get(getUsers).post(auth, createUser);
+router.route('/').get(auth, getUsers).post(auth, createUser);
 
 router
   .route('/:id')
-  .get(getUser)
+  .get(auth, getUser)
   .put(auth, updateUser)
   .delete(auth, deleteUser);
 

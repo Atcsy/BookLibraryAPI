@@ -41,3 +41,10 @@ exports.loginUser = asyncHandler(async (req, res, next) => {
   const token = user.getJwt();
   res.status(201).json({ success: true, token });
 });
+
+// GET api/v1/me auth
+exports.getMe = asyncHandler(async (req, res, next) => {
+  const user = await User.findById(req.user.id);
+
+  res.status(201).json({ success: true, data: user });
+});

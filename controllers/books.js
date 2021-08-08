@@ -13,9 +13,7 @@ exports.getBook = asyncHandler(async (req, res, next) => {
   const book = await Book.findById(req.params.id);
 
   if (!book) {
-    return next(
-      new ErrorResponse(`Resource not found with id of ${req.params.id}`, 404)
-    );
+    return next(new ErrorResponse('Resource not found', 404));
   }
   res.status(200).json({ succes: true, data: book });
 });
@@ -35,7 +33,7 @@ exports.createBook = asyncHandler(async (req, res, next) => {
   res.status(201).json({ success: true, data: book });
 });
 
-// PUT api/v1/books/:id
+// PUT api/v1/books/:id auth
 exports.updateBook = asyncHandler(async (req, res, next) => {
   const book = await Book.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
@@ -43,21 +41,17 @@ exports.updateBook = asyncHandler(async (req, res, next) => {
   });
 
   if (!book) {
-    return next(
-      new ErrorResponse(`Resource not found with id of ${req.params.id}`, 404)
-    );
+    return next(new ErrorResponse('Resource not found', 404));
   }
   res.status(200).json({ succes: true, data: book });
 });
 
-// DELETE api/v1/books/:id
+// DELETE api/v1/books/:id auth
 exports.deleteBook = asyncHandler(async (req, res, next) => {
   const book = await Book.findByIdAndDelete(req.params.id);
 
   if (!book) {
-    return next(
-      new ErrorResponse(`Resource not found with id of ${req.params.id}`, 404)
-    );
+    return next(new ErrorResponse('Resource not found', 404));
   }
   res.status(200).json({ success: true });
 });

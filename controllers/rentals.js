@@ -5,7 +5,7 @@ const Book = require('../models/Book');
 const User = require('../models/User');
 const Rental = require('../models/Rental');
 
-//POST api/v1/rentals/rent/:id (user)
+//POST api/v1/rentals/rent/:id (user) auth
 exports.rentBook = asyncHandler(async (req, res, next) => {
   const user = await User.findById(req.params.id);
   const book = await Book.findById(req.body.bookId);
@@ -54,7 +54,7 @@ exports.rentBook = asyncHandler(async (req, res, next) => {
     .json({ succes: true, message: `succefully rented ${book.title}` });
 });
 
-//POST api/v1/rentals/return/:id (user)
+//POST api/v1/rentals/return/:id (user) auth
 exports.returnBook = asyncHandler(async (req, res, next) => {
   const user = await User.findById(req.params.id);
   const book = await Book.findById(req.body.bookId);
@@ -79,7 +79,7 @@ exports.returnBook = asyncHandler(async (req, res, next) => {
   res.status(200).json({ succes: true, message: {} });
 });
 
-//GET api/v1/rentals/overdue/
+//GET api/v1/rentals/overdue/ auth
 exports.getOverDueRentals = asyncHandler(async (req, res, next) => {
   const overDuerentals = await Rental.find({
     returnDate: {
