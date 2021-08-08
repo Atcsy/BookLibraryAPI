@@ -20,9 +20,29 @@ exports.getBook = asyncHandler(async (req, res, next) => {
   res.status(200).json({ succes: true, data: book });
 });
 
-// POST api/v1/books
+// POST api/v1/books auth
 exports.createBook = asyncHandler(async (req, res, next) => {
-  const book = await Book.create(req.body);
+  const { title, author, year, pages, language, country } = req.body;
+
+  // Temporarly fix for mongoose model unique validation should be fixed later
+  const uniqueTitle = await Book.find({ title: 'PSYCHOLOGY, 3E' });
+
+  if (uniqueTitle) {
+    return next(
+      new ErrorResponse(
+        'We have this book, please update this instead of create',
+        400
+      )
+    );
+  }
+  const book = await Book.create({
+    title,
+    author,
+    year,
+    pages,
+    language,
+    country,
+  });
   res.status(201).json({ success: true, data: book });
 });
 

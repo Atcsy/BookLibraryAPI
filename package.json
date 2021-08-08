@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": ">=10.10.3 <17"
+    "node": ">14.10.3 <17"
   },
   "scripts": {
     "start": "NODE_ENV=porduction node index",
