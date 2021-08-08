@@ -2,21 +2,25 @@
   {
     "name": "Sasha Smith",
     "email": "sasha@gmail.com",
-    "password": "123456"
+    "password": "123456",
+    "phone": "238723894573224"
   },
   {
     "name": "George Harris",
     "email": "harris@gmail.com",
-    "password": "123456"
+    "password": "123456",
+    "phone": "238723894572324"
   },
   {
     "name": "Maria Glow",
     "email": "mglow@gmail.com",
-    "password": "123456"
+    "password": "123456",
+    "phone": "99923894224"
   },
   {
     "name": "Stephanie Hanson",
     "email": "stephhanson@gmail.com",
-    "password": "123456"
+    "password": "123456",
+    "phone": "89348723894573224"
   }
 ]
