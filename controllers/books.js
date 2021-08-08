@@ -24,17 +24,6 @@ exports.getBook = asyncHandler(async (req, res, next) => {
 exports.createBook = asyncHandler(async (req, res, next) => {
   const { title, author, year, pages, language, country } = req.body;
 
-  // Temporarly fix for mongoose model unique validation should be fixed later
-  const uniqueTitle = await Book.find({ title: 'PSYCHOLOGY, 3E' });
-
-  if (uniqueTitle) {
-    return next(
-      new ErrorResponse(
-        'We have this book, please update this instead of create',
-        400
-      )
-    );
-  }
   const book = await Book.create({
     title,
     author,
