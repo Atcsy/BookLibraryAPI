@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const errorHandler = require('./middleware/error');
 const connectDB = require('./config/db');
 //Routes
+const auth = require('./routes/auth');
 const users = require('./routes/users');
 const books = require('./routes/books');
 const rentals = require('./routes/rentals');
@@ -15,6 +16,7 @@ const app = express();
 app.use(express.json());
 
 //Mount routers
+app.use('/api/v1/', auth);
 app.use('/api/v1/users', users);
 app.use('/api/v1/books', books);
 app.use('/api/v1/rentals', rentals);

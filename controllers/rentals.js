@@ -88,11 +88,11 @@ exports.getOverDueRentals = asyncHandler(async (req, res, next) => {
   })
     .populate({
       path: 'book',
-      select: 'title, author',
+      select: 'title author',
     })
     .populate({
       path: 'user',
-      select: 'name, email',
+      select: 'name phone email',
     });
 
   if (overDuerentals.length === 0) {
