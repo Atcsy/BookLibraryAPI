@@ -38,4 +38,5 @@ This is a server-side javascript application built with [Express JS](https://exp
 ## Documentation
 
 API DOCUMENTATION
-soon
+
+(https://documenter.getpostman.com/view/16916239/TzskEihh)
