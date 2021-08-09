@@ -10,7 +10,7 @@ const { auth } = require('../middleware/auth');
 const router = express.Router();
 
 router.route('/overdue/').get(auth, getOverDueRentals);
-router.route('/rent/:id').post(auth, rentBook);
-router.route('/return/:id').post(auth, returnBook);
+router.route('/rent/').post(auth, rentBook);
+router.route('/return/').post(auth, returnBook);
 
 module.exports = router;

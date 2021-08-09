@@ -5,11 +5,11 @@ const Book = require('../models/Book');
 const User = require('../models/User');
 const Rental = require('../models/Rental');
 
-//POST api/v1/rentals/rent/:id (user) auth
+//POST api/v1/rentals/rent/ auth
 exports.rentBook = asyncHandler(async (req, res, next) => {
-  const user = await User.findById(req.params.id);
+  const user = await User.findById(req.user);
   const book = await Book.findById(req.body.bookId);
-  const rental = await Rental.find({ user: req.params.id });
+  const rental = await Rental.find({ user: req.user });
 
   //If we dont have user or book respond error
   if (!user || !book) {
@@ -22,7 +22,7 @@ exports.rentBook = asyncHandler(async (req, res, next) => {
   //Get the DueBooks from rental collection
   const dueBooks = await Rental.find({
     user: {
-      $eq: req.params.id,
+      $eq: req.user,
     },
     returnDate: {
       $lt: Date.now(),
@@ -43,7 +43,7 @@ exports.rentBook = asyncHandler(async (req, res, next) => {
     book: book._id,
     issueDate: Date.now(),
     returnDate: moment().add(14, 'days').toDate(),
-    user: user._id,
+    user: req.user,
   });
 
   // decrement inStock by 1
@@ -54,12 +54,12 @@ exports.rentBook = asyncHandler(async (req, res, next) => {
     .json({ succes: true, message: `succefully rented ${book.title}` });
 });
 
-//POST api/v1/rentals/return/:id (user) auth
+//POST api/v1/rentals/return/ auth
 exports.returnBook = asyncHandler(async (req, res, next) => {
-  const user = await User.findById(req.params.id);
+  const user = await User.findById(req.user);
   const book = await Book.findById(req.body.bookId);
   const rental = await Rental.find({
-    user: req.params.id,
+    user: req.user,
     book: req.body.bookId,
   });
 
@@ -69,14 +69,14 @@ exports.returnBook = asyncHandler(async (req, res, next) => {
   }
 
   await Rental.findOneAndDelete({
-    user: req.params.id,
+    user: req.user,
     book: req.body.bookId,
   });
 
   // increment inStock by 1
   await book.updateOne({ $inc: { inStock: +1 } }, { runValidators: true });
 
-  res.status(200).json({ succes: true, message: {} });
+  res.status(200).json({ succes: true, message: 'Thank you for returning' });
 });
 
 //GET api/v1/rentals/overdue/ auth
