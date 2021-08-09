@@ -31,8 +31,9 @@ This is a server-side javascript application built with [Express JS](https://exp
 4. [**cd**] into the root of the **project directory**.
 5. Run `npm run install` on the terminal to install project dependecies
 6. Create an config.env file in the root folder and define variables from config.env-sample. MONGO_URI and JWT_SECRET variables are required to start application
-7. Run `$ npm run dev` to start the application
-8. Navigate to `http://localhost:5000/api/v1` on your preferred browser
+7. Run `$ node seeder.js -i` to seed the database or `-d` to destroy it
+8. Run `$ npm run dev` to start the application
+9. Navigate to `http://localhost:5000/api/v1` on your preferred browser
 
 ## Documentation
 
