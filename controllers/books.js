@@ -3,9 +3,9 @@ const asyncHandler = require('../middleware/asyncHandler');
 const Book = require('../models/Book');
 
 // GET api/v1/books
+//pagination: ?page=2&limit=2
 exports.getBooks = asyncHandler(async (req, res, next) => {
-  const books = await Book.find();
-  res.status(200).json({ succes: true, data: books });
+  res.status(200).json(res.paginatedResult);
 });
 
 // GET api/v1/books/:id

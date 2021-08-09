@@ -6,12 +6,14 @@ const {
   updateBook,
   deleteBook,
 } = require('../controllers/books');
+const Book = require('../models/Book');
+const pagination = require('../middleware/pagination');
 
 const { auth } = require('../middleware/auth');
 
-const router = express.Router();
+const router = express.Router({ mergeParams: true });
 
-router.route('/').get(getBooks).post(auth, createBook);
+router.route('/').get(pagination(Book), getBooks).post(auth, createBook);
 
 router
   .route('/:id')
