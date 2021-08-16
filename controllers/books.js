@@ -1,11 +1,23 @@
-const ErrorResponse = require('../utils/errorResponse');
-const asyncHandler = require('../middleware/asyncHandler');
-const Book = require('../models/Book');
+const ErrorResponse = require("../utils/errorResponse");
+const asyncHandler = require("../middleware/asyncHandler");
+const Book = require("../models/Book");
 
-// GET api/v1/books
-//pagination: ?page=2&limit=2
+// GET api/v1/books   //filter by title ?name=string
 exports.getBooks = asyncHandler(async (req, res, next) => {
-  res.status(200).json(res.paginatedResult);
+  let regExObj = {};
+
+  // Only search with regexp if we have query for name otherwise get all books
+  if (req.query.name) {
+    const searchString = req.query.name.toString();
+    regExObj = { title: { $regex: searchString, $options: "i" } };
+  }
+
+  const books = await Book.find(regExObj);
+
+  res.status(200).json({
+    status: "success",
+    data: books,
+  });
 });
 
 // GET api/v1/books/:id
@@ -13,7 +25,7 @@ exports.getBook = asyncHandler(async (req, res, next) => {
   const book = await Book.findById(req.params.id);
 
   if (!book) {
-    return next(new ErrorResponse('Resource not found', 404));
+    return next(new ErrorResponse("Resource not found", 404));
   }
   res.status(200).json({ succes: true, data: book });
 });
@@ -41,7 +53,7 @@ exports.updateBook = asyncHandler(async (req, res, next) => {
   });
 
   if (!book) {
-    return next(new ErrorResponse('Resource not found', 404));
+    return next(new ErrorResponse("Resource not found", 404));
   }
   res.status(200).json({ succes: true, data: book });
 });
@@ -51,7 +63,7 @@ exports.deleteBook = asyncHandler(async (req, res, next) => {
   const book = await Book.findByIdAndDelete(req.params.id);
 
   if (!book) {
-    return next(new ErrorResponse('Resource not found', 404));
+    return next(new ErrorResponse("Resource not found", 404));
   }
   res.status(200).json({ success: true });
 });
