@@ -1,7 +1,7 @@
 [
   {
     "author": "Jane Austen",
-    "country": "United Kingdom",
+    "genre": "horror",
     "imageLink": "images/pride-and-prejudice.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Pride_and_Prejudice\n",
@@ -12,7 +12,7 @@
   },
   {
     "author": "Samuel Beckett",
-    "country": "Republic of Ireland",
+    "genre": "classic",
     "imageLink": "images/molloy-malone-dies-the-unnamable.jpg",
     "language": "French, English",
     "link": "https://en.wikipedia.org/wiki/Molloy_(novel)\n",
@@ -23,7 +23,7 @@
   },
   {
     "author": "Giovanni Boccaccio",
-    "country": "Italy",
+    "genre": "horror",
     "imageLink": "images/the-decameron.jpg",
     "language": "Italian",
     "link": "https://en.wikipedia.org/wiki/The_Decameron\n",
@@ -34,7 +34,7 @@
   },
   {
     "author": "Jorge Luis Borges",
-    "country": "Argentina",
+    "genre": "classic",
     "imageLink": "images/ficciones.jpg",
     "language": "Spanish",
     "link": "https://en.wikipedia.org/wiki/Ficciones\n",
@@ -45,7 +45,7 @@
   },
   {
     "author": "Emily Bront\u00eb",
-    "country": "United Kingdom",
+    "genre": "classic",
     "imageLink": "images/wuthering-heights.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Wuthering_Heights\n",
@@ -56,7 +56,7 @@
   },
   {
     "author": "Albert Camus",
-    "country": "Algeria, French Empire",
+    "genre": "horror",
     "imageLink": "images/l-etranger.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/The_Stranger_(novel)\n",
@@ -68,7 +68,7 @@
 
   {
     "author": "Louis-Ferdinand C\u00e9line",
-    "country": "France",
+    "genre": "funny",
     "imageLink": "images/voyage-au-bout-de-la-nuit.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Journey_to_the_End_of_the_Night\n",
@@ -79,7 +79,7 @@
   },
   {
     "author": "Miguel de Cervantes",
-    "country": "Spain",
+    "genre": "comic",
     "imageLink": "images/don-quijote-de-la-mancha.jpg",
     "language": "Spanish",
     "link": "https://en.wikipedia.org/wiki/Don_Quixote\n",
@@ -90,7 +90,7 @@
   },
   {
     "author": "Geoffrey Chaucer",
-    "country": "England",
+    "genre": "horror",
     "imageLink": "images/the-canterbury-tales.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/The_Canterbury_Tales\n",
@@ -101,7 +101,7 @@
   },
   {
     "author": "Anton Chekhov",
-    "country": "Russia",
+    "genre": "classic",
     "imageLink": "images/stories-of-anton-chekhov.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/List_of_short_stories_by_Anton_Chekhov\n",
@@ -112,7 +112,7 @@
   },
   {
     "author": "Joseph Conrad",
-    "country": "United Kingdom",
+    "genre": "drama",
     "imageLink": "images/nostromo.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Nostromo\n",
@@ -123,7 +123,7 @@
   },
   {
     "author": "Charles Dickens",
-    "country": "United Kingdom",
+    "genre": "drama",
     "imageLink": "images/great-expectations.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Great_Expectations\n",
@@ -134,7 +134,7 @@
   },
   {
     "author": "Denis Diderot",
-    "country": "France",
+    "genre": "drama",
     "imageLink": "images/jacques-the-fatalist.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Jacques_the_Fatalist\n",
@@ -145,7 +145,7 @@
   },
   {
     "author": "Alfred D\u00f6blin",
-    "country": "Germany",
+    "genre": "drama",
     "imageLink": "images/berlin-alexanderplatz.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/Berlin_Alexanderplatz\n",
@@ -156,7 +156,7 @@
   },
   {
     "author": "Fyodor Dostoevsky",
-    "country": "Russia",
+    "genre": "horror",
     "imageLink": "images/crime-and-punishment.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/Crime_and_Punishment\n",
@@ -167,7 +167,7 @@
   },
   {
     "author": "Fyodor Dostoevsky",
-    "country": "Russia",
+    "genre": "drama",
     "imageLink": "images/the-idiot.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/The_Idiot\n",
@@ -178,7 +178,7 @@
   },
   {
     "author": "Fyodor Dostoevsky",
-    "country": "Russia",
+    "genre": "horror",
     "imageLink": "images/the-possessed.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/Demons_(Dostoyevsky_novel)\n",
@@ -189,7 +189,7 @@
   },
   {
     "author": "Fyodor Dostoevsky",
-    "country": "Russia",
+    "genre": "mystey",
     "imageLink": "images/the-brothers-karamazov.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/The_Brothers_Karamazov\n",
@@ -200,7 +200,7 @@
   },
   {
     "author": "George Eliot",
-    "country": "United Kingdom",
+    "genre": "biography",
     "imageLink": "images/middlemarch.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Middlemarch\n",
@@ -211,7 +211,7 @@
   },
   {
     "author": "Ralph Ellison",
-    "country": "United States",
+    "genre": "biography",
     "imageLink": "images/invisible-man.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Invisible_Man\n",
@@ -222,7 +222,7 @@
   },
   {
     "author": "Euripides",
-    "country": "Greece",
+    "genre": "biography",
     "imageLink": "images/medea.jpg",
     "language": "Greek",
     "link": "https://en.wikipedia.org/wiki/Medea_(play)\n",
@@ -233,7 +233,7 @@
   },
   {
     "author": "William Faulkner",
-    "country": "United States",
+    "genre": "biography",
     "imageLink": "images/absalom-absalom.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Absalom,_Absalom!\n",
@@ -244,7 +244,7 @@
   },
   {
     "author": "William Faulkner",
-    "country": "United States",
+    "genre": "biography",
     "imageLink": "images/the-sound-and-the-fury.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/The_Sound_and_the_Fury\n",
@@ -255,7 +255,7 @@
   },
   {
     "author": "Gustave Flaubert",
-    "country": "France",
+    "genre": "funny",
     "imageLink": "images/madame-bovary.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Madame_Bovary\n",
@@ -266,7 +266,7 @@
   },
   {
     "author": "Gustave Flaubert",
-    "country": "France",
+    "genre": "horror",
     "imageLink": "images/l-education-sentimentale.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Sentimental_Education\n",
@@ -277,7 +277,7 @@
   },
   {
     "author": "Federico Garc\u00eda Lorca",
-    "country": "Spain",
+    "genre": "drama",
     "imageLink": "images/gypsy-ballads.jpg",
     "language": "Spanish",
     "link": "https://en.wikipedia.org/wiki/Gypsy_Ballads\n",
@@ -288,7 +288,7 @@
   },
   {
     "author": "Gabriel Garc\u00eda M\u00e1rquez",
-    "country": "Colombia",
+    "genre": "mystery",
     "imageLink": "images/one-hundred-years-of-solitude.jpg",
     "language": "Spanish",
     "link": "https://en.wikipedia.org/wiki/One_Hundred_Years_of_Solitude\n",
@@ -299,7 +299,7 @@
   },
   {
     "author": "Gabriel Garc\u00eda M\u00e1rquez",
-    "country": "Colombia",
+    "genre": "comic",
     "imageLink": "images/love-in-the-time-of-cholera.jpg",
     "language": "Spanish",
     "link": "https://en.wikipedia.org/wiki/Love_in_the_Time_of_Cholera\n",
@@ -310,7 +310,7 @@
   },
   {
     "author": "Johann Wolfgang von Goethe",
-    "country": "Saxe-Weimar",
+    "genre": "comic",
     "imageLink": "images/faust.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/Goethe%27s_Faust\n",
@@ -321,7 +321,7 @@
   },
   {
     "author": "Nikolai Gogol",
-    "country": "Russia",
+    "genre": "comic",
     "imageLink": "images/dead-souls.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/Dead_Souls\n",
@@ -332,7 +332,7 @@
   },
   {
     "author": "G\u00fcnter Grass",
-    "country": "Germany",
+    "genre": "comic",
     "imageLink": "images/the-tin-drum.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/The_Tin_Drum\n",
@@ -343,7 +343,7 @@
   },
   {
     "author": "Jo\u00e3o Guimar\u00e3es Rosa",
-    "country": "Brazil",
+    "genre": "drama",
     "imageLink": "images/the-devil-to-pay-in-the-backlands.jpg",
     "language": "Portuguese",
     "link": "https://en.wikipedia.org/wiki/The_Devil_to_Pay_in_the_Backlands\n",
@@ -354,7 +354,7 @@
   },
   {
     "author": "Knut Hamsun",
-    "country": "Norway",
+    "genre": "horror",
     "imageLink": "images/hunger.jpg",
     "language": "Norwegian",
     "link": "https://en.wikipedia.org/wiki/Hunger_(Hamsun_novel)\n",
@@ -365,7 +365,7 @@
   },
   {
     "author": "Ernest Hemingway",
-    "country": "United States",
+    "genre": "mystery",
     "imageLink": "images/the-old-man-and-the-sea.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/The_Old_Man_and_the_Sea\n",
@@ -376,7 +376,7 @@
   },
   {
     "author": "Homer",
-    "country": "Greece",
+    "genre": "comic",
     "imageLink": "images/the-iliad-of-homer.jpg",
     "language": "Greek",
     "link": "https://en.wikipedia.org/wiki/Iliad\n",
@@ -387,7 +387,7 @@
   },
   {
     "author": "Homer",
-    "country": "Greece",
+    "genre": "comic",
     "imageLink": "images/the-odyssey-of-homer.jpg",
     "language": "Greek",
     "link": "https://en.wikipedia.org/wiki/Odyssey\n",
@@ -398,7 +398,7 @@
   },
   {
     "author": "Henrik Ibsen",
-    "country": "Norway",
+    "genre": "comic",
     "imageLink": "images/a-Dolls-house.jpg",
     "language": "Norwegian",
     "link": "https://en.wikipedia.org/wiki/A_Doll%27s_House\n",
@@ -409,7 +409,7 @@
   },
   {
     "author": "James Joyce",
-    "country": "Irish Free State",
+    "genre": "mystery",
     "imageLink": "images/ulysses.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Ulysses_(novel)\n",
@@ -420,7 +420,7 @@
   },
   {
     "author": "Franz Kafka",
-    "country": "Czechoslovakia",
+    "genre": "biography",
     "imageLink": "images/the-trial.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/The_Trial\n",
@@ -431,7 +431,7 @@
   },
   {
     "author": "Franz Kafka",
-    "country": "Czechoslovakia",
+    "genre": "horror",
     "imageLink": "images/the-castle.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/The_Castle_(novel)\n",
@@ -442,7 +442,7 @@
   },
   {
     "author": "K\u0101lid\u0101sa",
-    "country": "India",
+    "genre": "drama",
     "imageLink": "images/the-recognition-of-shakuntala.jpg",
     "language": "Sanskrit",
     "link": "https://en.wikipedia.org/wiki/Abhij%C3%B1%C4%81na%C5%9B%C4%81kuntalam\n",
@@ -453,7 +453,7 @@
   },
   {
     "author": "Yasunari Kawabata",
-    "country": "Japan",
+    "genre": "mystery",
     "imageLink": "images/the-sound-of-the-mountain.jpg",
     "language": "Japanese",
     "link": "https://en.wikipedia.org/wiki/The_Sound_of_the_Mountain\n",
@@ -464,7 +464,7 @@
   },
   {
     "author": "Nikos Kazantzakis",
-    "country": "Greece",
+    "genre": "comic",
     "imageLink": "images/zorba-the-greek.jpg",
     "language": "Greek",
     "link": "https://en.wikipedia.org/wiki/Zorba_the_Greek\n",
@@ -475,7 +475,7 @@
   },
   {
     "author": "D. H. Lawrence",
-    "country": "United Kingdom",
+    "genre": "mystery",
     "imageLink": "images/sons-and-lovers.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Sons_and_Lovers\n",
@@ -486,7 +486,7 @@
   },
   {
     "author": "Halld\u00f3r Laxness",
-    "country": "Iceland",
+    "genre": "science fiction",
     "imageLink": "images/independent-people.jpg",
     "language": "Icelandic",
     "link": "https://en.wikipedia.org/wiki/Independent_People\n",
@@ -497,7 +497,7 @@
   },
   {
     "author": "Doris Lessing",
-    "country": "United Kingdom",
+    "genre": "mystery",
     "imageLink": "images/the-golden-notebook.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/The_Golden_Notebook\n",
@@ -508,7 +508,7 @@
   },
   {
     "author": "Astrid Lindgren",
-    "country": "Sweden",
+    "genre": "horror",
     "imageLink": "images/pippi-longstocking.jpg",
     "language": "Swedish",
     "link": "https://en.wikipedia.org/wiki/Pippi_Longstocking\n",
@@ -519,7 +519,7 @@
   },
   {
     "author": "Lu Xun",
-    "country": "China",
+    "genre": "drama",
     "imageLink": "images/diary-of-a-madman.jpg",
     "language": "Chinese",
     "link": "https://en.wikipedia.org/wiki/A_Madman%27s_Diary\n",
@@ -530,7 +530,7 @@
   },
   {
     "author": "Naguib Mahfouz",
-    "country": "Egypt",
+    "genre": "drama",
     "imageLink": "images/children-of-gebelawi.jpg",
     "language": "Arabic",
     "link": "https://en.wikipedia.org/wiki/Children_of_Gebelawi\n",
@@ -541,7 +541,7 @@
   },
   {
     "author": "Thomas Mann",
-    "country": "Germany",
+    "genre": "horror",
     "imageLink": "images/buddenbrooks.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/Buddenbrooks\n",
@@ -552,7 +552,7 @@
   },
   {
     "author": "Thomas Mann",
-    "country": "Germany",
+    "genre": "comic",
     "imageLink": "images/the-magic-mountain.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/The_Magic_Mountain\n",
@@ -563,7 +563,7 @@
   },
   {
     "author": "Herman Melville",
-    "country": "United States",
+    "genre": "fantasy",
     "imageLink": "images/moby-dick.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Moby-Dick\n",
@@ -574,7 +574,7 @@
   },
   {
     "author": "Michel de Montaigne",
-    "country": "France",
+    "genre": "famtasy",
     "imageLink": "images/essais.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Essays_(Montaigne)\n",
@@ -585,7 +585,7 @@
   },
   {
     "author": "Elsa Morante",
-    "country": "Italy",
+    "genre": "fantasy",
     "imageLink": "images/history.jpg",
     "language": "Italian",
     "link": "https://en.wikipedia.org/wiki/History_(novel)\n",
@@ -596,7 +596,7 @@
   },
   {
     "author": "Toni Morrison",
-    "country": "United States",
+    "genre": "fantasy",
     "imageLink": "images/beloved.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Beloved_(novel)\n",
@@ -607,7 +607,7 @@
   },
   {
     "author": "Murasaki Shikibu",
-    "country": "Japan",
+    "genre": "drama",
     "imageLink": "images/the-tale-of-genji.jpg",
     "language": "Japanese",
     "link": "https://en.wikipedia.org/wiki/The_Tale_of_Genji\n",
@@ -618,7 +618,7 @@
   },
   {
     "author": "Robert Musil",
-    "country": "Austria",
+    "genre": "horror",
     "imageLink": "images/the-man-without-qualities.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/The_Man_Without_Qualities\n",
@@ -629,7 +629,7 @@
   },
   {
     "author": "Vladimir Nabokov",
-    "country": "Russia/United States",
+    "genre": "horror",
     "imageLink": "images/lolita.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Lolita\n",
@@ -640,7 +640,7 @@
   },
   {
     "author": "George Orwell",
-    "country": "United Kingdom",
+    "genre": "drama",
     "imageLink": "images/nineteen-eighty-four.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Nineteen_Eighty-Four\n",
@@ -651,7 +651,7 @@
   },
   {
     "author": "Ovid",
-    "country": "Roman Empire",
+    "genre": "mystery",
     "imageLink": "images/the-metamorphoses-of-ovid.jpg",
     "language": "Classical Latin",
     "link": "https://en.wikipedia.org/wiki/Metamorphoses\n",
@@ -662,7 +662,7 @@
   },
   {
     "author": "Fernando Pessoa",
-    "country": "Portugal",
+    "genre": "mystery",
     "imageLink": "images/the-book-of-disquiet.jpg",
     "language": "Portuguese",
     "link": "https://en.wikipedia.org/wiki/The_Book_of_Disquiet\n",
@@ -673,7 +673,7 @@
   },
   {
     "author": "Edgar Allan Poe",
-    "country": "United States",
+    "genre": "drama",
     "imageLink": "images/tales-and-poems-of-edgar-allan-poe.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Edgar_Allan_Poe_bibliography#Tales\n",
@@ -684,7 +684,7 @@
   },
   {
     "author": "Marcel Proust",
-    "country": "France",
+    "genre": "horror",
     "imageLink": "images/a-la-recherche-du-temps-perdu.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/In_Search_of_Lost_Time\n",
@@ -695,7 +695,7 @@
   },
   {
     "author": "Fran\u00e7ois Rabelais",
-    "country": "France",
+    "genre": "horror",
     "imageLink": "images/gargantua-and-pantagruel.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Gargantua_and_Pantagruel\n",
@@ -706,7 +706,7 @@
   },
   {
     "author": "Juan Rulfo",
-    "country": "Mexico",
+    "genre": "drama",
     "imageLink": "images/pedro-paramo.jpg",
     "language": "Spanish",
     "link": "https://en.wikipedia.org/wiki/Pedro_P%C3%A1ramo\n",
@@ -717,7 +717,7 @@
   },
   {
     "author": "Rumi",
-    "country": "Sultanate of Rum",
+    "genre": "drama",
     "imageLink": "images/the-masnavi.jpg",
     "language": "Persian",
     "link": "https://en.wikipedia.org/wiki/Masnavi\n",
@@ -728,7 +728,7 @@
   },
   {
     "author": "Salman Rushdie",
-    "country": "United Kingdom, India",
+    "genre": "drama",
     "imageLink": "images/midnights-children.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Midnight%27s_Children\n",
@@ -739,7 +739,7 @@
   },
   {
     "author": "Saadi",
-    "country": "Persia, Persian Empire",
+    "genre": "horror",
     "imageLink": "images/bostan.jpg",
     "language": "Persian",
     "link": "https://en.wikipedia.org/wiki/Bustan_(book)\n",
@@ -750,7 +750,7 @@
   },
   {
     "author": "Tayeb Salih",
-    "country": "Sudan",
+    "genre": "mystery",
     "imageLink": "images/season-of-migration-to-the-north.jpg",
     "language": "Arabic",
     "link": "https://en.wikipedia.org/wiki/Season_of_Migration_to_the_North\n",
@@ -761,7 +761,7 @@
   },
   {
     "author": "Jos\u00e9 Saramago",
-    "country": "Portugal",
+    "genre": "mystery",
     "imageLink": "images/blindness.jpg",
     "language": "Portuguese",
     "link": "https://en.wikipedia.org/wiki/Blindness_(novel)\n",
@@ -772,7 +772,7 @@
   },
   {
     "author": "William Shakespeare",
-    "country": "England",
+    "genre": "mystery",
     "imageLink": "images/hamlet.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Hamlet\n",
@@ -783,7 +783,7 @@
   },
   {
     "author": "William Shakespeare",
-    "country": "England",
+    "genre": "mystery",
     "imageLink": "images/king-lear.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/King_Lear\n",
@@ -794,7 +794,7 @@
   },
   {
     "author": "William Shakespeare",
-    "country": "England",
+    "genre": "horror",
     "imageLink": "images/othello.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Othello\n",
@@ -805,7 +805,7 @@
   },
   {
     "author": "Sophocles",
-    "country": "Greece",
+    "genre": "drama",
     "imageLink": "images/oedipus-the-king.jpg",
     "language": "Greek",
     "link": "https://en.wikipedia.org/wiki/Oedipus_the_King\n",
@@ -816,7 +816,7 @@
   },
   {
     "author": "Stendhal",
-    "country": "France",
+    "genre": "horror",
     "imageLink": "images/le-rouge-et-le-noir.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/The_Red_and_the_Black\n",
@@ -827,7 +827,7 @@
   },
   {
     "author": "Laurence Sterne",
-    "country": "England",
+    "genre": "drama",
     "imageLink": "images/the-life-and-opinions-of-tristram-shandy.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/The_Life_and_Opinions_of_Tristram_Shandy,_Gentleman\n",
@@ -838,7 +838,7 @@
   },
   {
     "author": "Italo Svevo",
-    "country": "Italy",
+    "genre": "horror",
     "imageLink": "images/confessions-of-zeno.jpg",
     "language": "Italian",
     "link": "https://en.wikipedia.org/wiki/Zeno%27s_Conscience\n",
@@ -849,7 +849,7 @@
   },
   {
     "author": "Jonathan Swift",
-    "country": "Ireland",
+    "genre": "drama",
     "imageLink": "images/gullivers-travels.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Gulliver%27s_Travels\n",
@@ -860,7 +860,7 @@
   },
   {
     "author": "Leo Tolstoy",
-    "country": "Russia",
+    "genre": "horror",
     "imageLink": "images/war-and-peace.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/War_and_Peace\n",
@@ -871,7 +871,7 @@
   },
   {
     "author": "Leo Tolstoy",
-    "country": "Russia",
+    "genre": "drama",
     "imageLink": "images/anna-karenina.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/Anna_Karenina\n",
@@ -882,7 +882,7 @@
   },
   {
     "author": "Leo Tolstoy",
-    "country": "Russia",
+    "genre": "mystery",
     "imageLink": "images/the-death-of-ivan-ilyich.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/The_Death_of_Ivan_Ilyich\n",
@@ -893,7 +893,7 @@
   },
   {
     "author": "Mark Twain",
-    "country": "United States",
+    "genre": "mystery",
     "imageLink": "images/the-adventures-of-huckleberry-finn.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Adventures_of_Huckleberry_Finn\n",
@@ -904,7 +904,7 @@
   },
   {
     "author": "Valmiki",
-    "country": "India",
+    "genre": "comic",
     "imageLink": "images/ramayana.jpg",
     "language": "Sanskrit",
     "link": "https://en.wikipedia.org/wiki/Ramayana\n",
@@ -915,7 +915,7 @@
   },
   {
     "author": "Virgil",
-    "country": "Roman Empire",
+    "genre": "mystery",
     "imageLink": "images/the-aeneid.jpg",
     "language": "Classical Latin",
     "link": "https://en.wikipedia.org/wiki/Aeneid\n",
@@ -926,7 +926,7 @@
   },
   {
     "author": "Vyasa",
-    "country": "India",
+    "genre": "drama",
     "imageLink": "images/the-mahab-harata.jpg",
     "language": "Sanskrit",
     "link": "https://en.wikipedia.org/wiki/Mahabharata\n",
@@ -937,7 +937,7 @@
   },
   {
     "author": "Walt Whitman",
-    "country": "United States",
+    "genre": "comic",
     "imageLink": "images/leaves-of-grass.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Leaves_of_Grass\n",

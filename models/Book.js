@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const BookSchema = new mongoose.Schema({
   author: {
@@ -6,7 +6,7 @@ const BookSchema = new mongoose.Schema({
     required: true,
     maxlength: 100,
   },
-  country: {
+  genre: {
     type: String,
     maxlength: 100,
     required: true,
@@ -51,4 +51,4 @@ const BookSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('Book', BookSchema);
+module.exports = mongoose.model("Book", BookSchema);
